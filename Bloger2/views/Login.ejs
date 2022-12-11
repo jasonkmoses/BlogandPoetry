@@ -1,0 +1,11 @@
+<%- include("header");-%>
+<div class="" style="text-align:center;">
+  <h1 style="margin-top:60px;">Login</h1>
+  <p>Login in for Admin access</p>
+  <form class="" action="/Login" method="post">
+      <input type="text" name="password" value="" placeholder="password">
+        <button type="submit" name="button">Confirm</button>
+  </form>
+  <p><%=Error%></p>
+</div>
+<%- include("footer");-%>

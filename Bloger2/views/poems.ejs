@@ -1,0 +1,78 @@
+<%- include("header");-%>
+<h1 id="poem-heading" style="margin-top:80px;margin-bottom:80px;" class="philosopher">Poems</h1>
+<section id="Poems">
+<table class="table">
+<thead>
+  <tr>
+    <th scope="col">Poem title</th>
+    <th scope="col">Read</th>
+    <th scope="col">Copy Link</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <% posts.forEach(function(post) { %>
+    <td class="push"><%=post.title%></td>
+    <td><a class="viewing" href="/posts/<%=post._id%>">View</a></td>
+    <td><button onclick="copyToClip<%=post._id%>();successPopUp();" type="button" name="button" style="background-color:transparent; border:none;" id="viewLinkOf<%=post._id%>"><a class="viewing" href="#"><i class="fas fa-clipboard" style="font-size:150%;"></i></a></button></td>
+  </tr>
+  <script type="text/javascript">
+    function copyToClip<%=post._id%>() {
+    document.getElementById('viewLinkOf<%=post._id%>').addEventListener("click",function(){
+       var viewLink = "<%=post._id%>";
+       navigator.clipboard.writeText("https://blogandpoetrypoems.herokuapp.com/posts/" + viewLink);});
+     }
+  </script>
+<% }); %>
+</tbody>
+</table>
+</section>
+<footer id="successLink">
+<div style="width:100%;background-color:rgba(240, 240, 240, 0.1);display:inline-flex;padding-bottom:25px;padding-top:25px;margin-top:120px;">
+<i class="fas fa-check-circle" style="font-size: 30px; color:#4cd3c2; margin-left:15px;"></i>
+<p style="margin:0; margin-left:15px;padding:0;">Link Successfully copied!</p>
+</div>
+</footer>
+        <script type="text/javascript">
+          var navBTN = document.getElementById('navBTN');
+          var icon_of_nav_btn = document.getElementById('icon-of-nav-btn')
+          var homeTab = document.getElementById('homeTab');
+          var line1 = document.getElementById('line-1');
+          var line2 = document.getElementById('line-2');
+          var line3 = document.getElementById('line-3');
+          var navbartop = document.getElementById('navbartop');
+        t = 0; p = 0;
+        navBTN.addEventListener("click", function () {
+        if (p == 0) {
+        t = t + 1;
+        icon_of_nav_btn.classList.remove('openBurger');
+        line1.classList.add('line_one_animation');
+        line2.classList.add('line_two_animation');
+        line3.classList.add('line_three_animation');
+        p = 1;
+        } if (t % 2 == 0) {
+           t = t + 1;
+           line1.classList.remove('line_one_animation');
+           line2.classList.remove('line_two_animation');
+           line3.classList.remove('line_three_animation');
+           icon_of_nav_btn.classList.add('openBurger');
+        } else {
+            t = t + 1;
+            line1.classList.add('line_one_animation');
+            line2.classList.add('line_two_animation');
+            line3.classList.add('line_three_animation');
+            icon_of_nav_btn.classList.remove('openBurger');
+          }});
+          function successPopUp() {
+            var successLink = document.getElementById('successLink');
+            successLink.classList.add("displayLinkSuccess");
+            setTimeout(() => {successLink.classList.remove("displayLinkSuccess");}, 2000);
+          }
+        </script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        </html>

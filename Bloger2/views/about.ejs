@@ -1,0 +1,365 @@
+
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.typekit.net/ket8cbw.css">
+        <link rel="shortcut icon" type="image/png"  href="images/favicon.png">
+        <title style="font-family: philosopher, sans-serif;">Poetry</title>
+      </head>
+      <body>
+            <div class="" id="topOfpage">
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+              <a class="navbar-brand" href="/"><h1 style="margin:0; font-family: philosopher, sans-serif;">Poetry</h1></a>
+            <div class="diving">
+              <button class="navbar-toggler" id="navBTN" type="button" target="#topOfpage" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="navButton">
+                <div class="menu-icon" id="icon-of-nav-btn">
+                <span id="line-1" style="text-align:center;"></span>
+                <span id="line-2" style="text-align:center;"></span>
+                <span id="line-3" style="text-align:center;"></span>
+                </div>
+              </div>
+            </div>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/"><h5>Home</h5><span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/poems"><h5>Poems</h5></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/about"><h5>About</h5></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/auth"><h5>Sign in</h5></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/Admin"><h5>Admin</h5></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/logOut"><h5>Logout</h5></a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </head>
+ <style>
+   .menu-icon span {
+     background-color:black;
+   }
+   .footer i {
+     color:white;
+   }
+  .bg-light {
+    background-color:transparent!important;
+  }
+  .navbar-brand {
+    color:#4a324a!important;
+  }
+   body {
+color: black;
+margin-top: 5%;
+position: relative;
+bottom: 60%;
+text-align: center;
+padding-bottom: 1150px;
+background-repeat: no-repeat;
+background-size: 700% 100%;
+background-image: -webkit-linear-gradient(-240deg, #000 50%, #ffffff 50%);
+animation: gradient2 13s ease infinite;
+   }
+   @media screen and (min-width: 600px) {
+     body {
+       background-size: 200% 100%;
+     }
+   }
+   .nav-link {
+     color: black!important;
+   }
+
+.page-1 {
+  transform-origin: left center;
+  background: url('images/photo1.jpeg') no-repeat;
+  background-size: cover;
+  transform-origin: 0 50%;
+  transition: all 0.3s ease;
+  animation: rotatePages 7s linear;
+  animation-fill-mode: forwards;
+}
+.page-2 {
+  background: url('images/photo2.jpeg') no-repeat;
+  background-size: cover;
+  transform-origin: 0 50%;
+  transition: all 0.3s ease;
+  animation: rotatePages2 7s linear;
+  animation-fill-mode: forwards;
+}
+.page-3 {
+  background: url('images/photo3.jpeg') no-repeat;
+  transform-origin: 0 50%;
+  background-size: cover;
+  transition: all 0.3s ease;
+  animation: rotatePages3 7s linear;
+  animation-fill-mode: forwards;
+}
+.page {
+  background: url('images/book.png') no-repeat;
+  background-size: cover;
+  transform-origin: 0 50%;
+  transition: all 0.3s ease;
+  animation: rotatePages4 7s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes toBottom {
+0% {
+  transform: translateY(0px) rotate(-60deg);
+  z-index: 3;
+}
+100% {
+  transform: translateY(950px) rotate(0deg);
+  z-index: 3;
+}
+}
+@keyframes toBottom2 {
+0% {
+  z-index: 3;
+  transform: translateY(0px) rotate(60deg);
+}
+100% {
+  z-index: 3;
+  transform: translateY(410px) rotate(0deg);
+}
+}
+.page-to-bottom {
+  background: url('images/photo4.jpeg') no-repeat;
+  background-size: cover;
+  transform-origin: 0 50%;
+  animation: toBottom  7s linear forwards, gradient3 7s linear infinite alternate none;
+  border: 4px solid black;
+  margin: 0;
+  margin-left: -57px;
+}
+.page-to-bottom-2 {
+  border: 4px solid black;
+  background: url('images/photo5.jpeg') no-repeat;
+  background-size: cover;
+  transform-origin: 0 50%;
+  animation: toBottom2  7s linear forwards, gradient3 7s linear infinite alternate none;
+  margin: 0;
+  margin-left: -57px;
+}
+.inner {
+  position: absolute;
+  width: 135px;
+  height: 220px;
+  border: 4px solid black;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25)!important;
+}
+.outer {
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+}
+.allignDivs {
+  margin-top: 195px;
+  margin-bottom: 1335px;
+  display: block;
+  position: relative;
+}
+@keyframes rotatePages {
+0% {
+  transform: rotateZ(0deg);
+}
+100% {
+  transform: rotateZ(90deg);
+}
+}
+@keyframes rotatePages2 {
+0% {
+  transform: rotateZ(0deg);
+}
+100% {
+  transform: rotateZ(180deg);
+}
+}
+@keyframes rotatePages3 {
+0% {
+  transform: rotateZ(0deg);
+}
+100% {
+  transform: rotateZ(270deg);
+}
+}
+@keyframes rotatePages4 {
+0% {
+  transform: rotateZ(0deg);
+}
+100% {
+  transform: rotateZ(360deg);
+}
+}
+.outer  {
+  margin: 120px;
+  transform: translate(50%, 5%);
+  display: block;
+}
+.textTransform p {
+  z-index: -80;
+}
+.textTransform #typingText {
+ transform: translateY(560px);
+}
+.textTransform #typingText2 {
+ transform: translateY(1100px);
+}
+.footer i {
+  font-size: 26px;
+  margin: 2%;
+  margin-top: 95px;
+  margin-bottom: 7%;
+}
+.footer .fa-instagram {
+  animation: Icon 3s ease infinite;
+}
+.footer .fa-facebook {
+  animation: Icon 4s ease infinite;
+}
+.footer .fa-twitter {
+  animation: Icon 5s ease infinite;
+}
+@keyframes gradient3 {
+  0% {
+  border-color: black;
+  }
+	50% {
+  border-color: grey;
+	}
+  100% {
+  border-color: white;
+	}
+}
+.textToChange {
+ animation: gradient2 13s ease infinite;
+}
+@media screen and (min-width:1000px) {
+  .inner {
+    width: 235px;
+    height: 320px;
+  }
+  @keyframes toBottom {
+  0% {
+    transform: translateY(0px) rotate(-60deg);
+    z-index: 3;
+  }
+  100% {
+    transform: translateY(1250px) rotate(0deg);
+    z-index: 3;
+  }
+  }
+  @keyframes toBottom2 {
+  0% {
+    z-index: 3;
+    transform: translateY(0px) rotate(60deg);
+  }
+  100% {
+    z-index: 3;
+    transform: translateY(610px) rotate(0deg);
+  }
+  }
+  .textTransform #typingText {
+   transform: translateY(860px);
+  }
+  .textTransform #typingText2 {
+   transform: translateY(1400px);
+  }
+  body {
+    padding-bottom: 1550px;
+  }
+}
+</style>
+</head>
+<body>
+  <div style="margin:30px; display:flex;">
+  <div class="outer">
+     <div class="inner page" style="z-index:4;"></div>
+     <div class="inner page-to-bottom" style="z-index:-1;"></div>
+     <div class="inner page-to-bottom-2" style="z-index:-2;"></div>
+     <div class="inner page-2" style="z-index:2;"></div>
+     <div class="inner page-3" style="z-index:1;"></div>
+     <div class="inner page-1" style="z-index:3;"></div>
+  </div>
+</div>
+<div class="textTransform">
+<p id="typingText" class="textToChange" style="color:white;"></p>
+<p id="typingText2" style="color:white;"></p>
+</div>
+<script type="text/javascript">
+var navBTN = document.getElementById('navBTN');
+var icon_of_nav_btn = document.getElementById('icon-of-nav-btn')
+var homeTab = document.getElementById('homeTab');
+var line1 = document.getElementById('line-1');
+var line2 = document.getElementById('line-2');
+var line3 = document.getElementById('line-3');
+var navbartop = document.getElementById('navbartop');
+t = 0; p = 0;
+navBTN.addEventListener("click", function () {
+if (p == 0) {
+t = t + 1;
+icon_of_nav_btn.classList.remove('openBurger');
+line1.classList.add('line_one_animation');
+line2.classList.add('line_two_animation');
+line3.classList.add('line_three_animation');
+p = 1;
+} if (t % 2 == 0) {
+ t = t + 1;
+ line1.classList.remove('line_one_animation');
+ line2.classList.remove('line_two_animation');
+ line3.classList.remove('line_three_animation');
+ icon_of_nav_btn.classList.add('openBurger');
+} else {
+  t = t + 1;
+  line1.classList.add('line_one_animation');
+  line2.classList.add('line_two_animation');
+  line3.classList.add('line_three_animation');
+  icon_of_nav_btn.classList.remove('openBurger'); }});
+var i = 0;
+var k = 0;
+var endCode = false;
+var speed = 190;
+var txt = "hey how are u my name is so and so and I write poerty";
+var txt2 = 'Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet';
+var txtArray = [txt, txt2];
+var text = document.getElementById("typingText");
+var text2 = document.getElementById("typingText2");
+var e = txt.length-1;
+var r = txt2.length-1;
+function typeWriter() {
+      if (i < txtArray[k].length + 1) {
+      text.innerHTML += txt.charAt(i);
+      text2.innerHTML += txt2.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed); }
+      if (i > txtArray[k].length) { i = 0;}
+      if (i == txtArray[k].length) {
+      var str = "";
+      var str2 = "";
+      text.innerHTML = str;
+      text2.innerHTML = str2;
+      i++;
+      setTimeout(typeWriter, speed);}}
+      typeWriter();
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

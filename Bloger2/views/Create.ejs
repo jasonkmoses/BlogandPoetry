@@ -1,0 +1,55 @@
+<%- include("header");-%>
+<section class ="composing">
+
+          <h2 class="alligning composesHeading" style="margin-top:15%;">+Add Poem</h2>
+
+          <form class="" action="/poems" method="post" style="margin-top:5%; padding-bottom:15%; margin-left:15%; margin-right:15%;">
+            <div class="form-group alligning">
+              <div>
+                <input  class="form-control naming" type="text" name="postTitle" style="width: 50%; display: inline!important; margin-top:10%;" placeholder="Title">
+              </div>
+              <textarea class="form-control" name="postBody" rows="5" cols="30" style="margin-top:15%;" placeholder="Body of poem"></textarea>
+            </div>
+            <button class="btn btn-secondary" type="submit" name="clickMe" style="margin-top:20%;">Publish</button>
+          </form>
+        </section>
+
+        <script type="text/javascript">
+          var navBTN = document.getElementById('navBTN');
+          var icon_of_nav_btn = document.getElementById('icon-of-nav-btn')
+          var homeTab = document.getElementById('homeTab');
+          var line1 = document.getElementById('line-1');
+          var line2 = document.getElementById('line-2');
+          var line3 = document.getElementById('line-3');
+          var navbartop = document.getElementById('navbartop');
+        t = 0; p = 0;
+        navBTN.addEventListener("click", function () {
+        if (p == 0) {
+        t = t + 1;
+        icon_of_nav_btn.classList.remove('openBurger');
+        line1.classList.add('line_one_animation');
+        line2.classList.add('line_two_animation');
+        line3.classList.add('line_three_animation');
+        p = 1;
+        } if (t % 2 == 0) {
+           t = t + 1;
+           console.log("close");
+           line1.classList.remove('line_one_animation');
+           line2.classList.remove('line_two_animation');
+           line3.classList.remove('line_three_animation');
+           icon_of_nav_btn.classList.add('openBurger');
+        } else {
+            t = t + 1;
+            line1.classList.add('line_one_animation');
+            line2.classList.add('line_two_animation');
+            line3.classList.add('line_three_animation');
+            icon_of_nav_btn.classList.remove('openBurger');
+          }
+        });
+        </script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        </html>

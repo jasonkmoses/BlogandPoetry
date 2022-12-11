@@ -1,0 +1,91 @@
+<%- include("header");-%>
+<p class="alligning">This is where you can delete poems and unwanted comments.</p>
+<section id="Poems">
+<h1 id="poem-heading" style="margin-top:14%;">Poems</h1>
+<table class="table"  style="margin-top:20%;margin-bottom:30%;">
+<thead>
+  <tr>
+    <th scope="col">Poem</th>
+    <th scope="col" style="text-align:right;"> </th>
+    <th scope="col">Delete</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+  <% posts.forEach(function(post) { %>
+  <%=console.log('ID ' + post._id)%>
+  <td class="push"><%=post.title%></td>
+    <td class="push" style="text-align:right;"> </td>
+  <form class="" action="/delete/<%=post._id%>/<%=post._id%>" method="post">
+    <td>
+      <button class="btn btn-secondary" type="submit">Delete</button>
+    </td>
+    </form>
+  </tr>
+<% }) %>
+</tbody>
+</table>
+<table class="table"  style="margin-top:30%;margin-bottom:30%;">
+<thead>
+  <tr>
+    <th scope="col">Comment</th>
+    <th scope="col">Name</th>
+    <th scope="col">Delete</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+  <% comments.forEach(function(comment) { %>
+    <%=console.log('Id delete' + comments)%>
+  <td class="push"><%=comment.content%></td>
+    <td class="push"><%=comment.title%></td>
+  <form class="" action="/delete/<%=comment._id%>" method="post">
+    <td>
+      <button class="btn btn-secondary" type="submit" >Delete</button>
+    </td>
+    </form>
+  </tr>
+<% }) %>
+</tbody>
+</table>
+</section>
+
+        <script type="text/javascript">
+          var navBTN = document.getElementById('navBTN');
+          var icon_of_nav_btn = document.getElementById('icon-of-nav-btn')
+          var homeTab = document.getElementById('homeTab');
+          var line1 = document.getElementById('line-1');
+          var line2 = document.getElementById('line-2');
+          var line3 = document.getElementById('line-3');
+          var navbartop = document.getElementById('navbartop');
+        t = 0; p = 0;
+        navBTN.addEventListener("click", function () {
+        if (p == 0) {
+        t = t + 1;
+        icon_of_nav_btn.classList.remove('openBurger');
+        line1.classList.add('line_one_animation');
+        line2.classList.add('line_two_animation');
+        line3.classList.add('line_three_animation');
+        p = 1;
+        } if (t % 2 == 0) {
+           t = t + 1;
+           console.log("close");
+           line1.classList.remove('line_one_animation');
+           line2.classList.remove('line_two_animation');
+           line3.classList.remove('line_three_animation');
+           icon_of_nav_btn.classList.add('openBurger');
+        } else {
+            t = t + 1;
+            line1.classList.add('line_one_animation');
+            line2.classList.add('line_two_animation');
+            line3.classList.add('line_three_animation');
+            icon_of_nav_btn.classList.remove('openBurger');
+          }
+        });
+        </script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        </html>

@@ -1,0 +1,30 @@
+{
+  "name": "bloger2",
+  "version": "1.0.0",
+  "description": "second website piece to the bigger one",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jason Moses",
+  "license": "ISC",
+  "engines": {
+    "node": "10.14.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "client-sessions": "^0.8.0",
+    "clipboard": "^2.0.6",
+    "cookie-session": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.4.15",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth": "^2.0.0",
+    "passport-instagram-graph-api": "^1.0.0",
+    "passport-twitter": "^1.0.4"
+  }
+}
