@@ -1,0 +1,22 @@
+{
+  "name": "bloger",
+  "version": "1.0.0",
+  "description": "blog site for English teacher",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jason K Moses",
+  "license": "ISC",
+  "engines": {
+    "node": "10.14.2"
+  },
+  "dependencies": {
+    "async": "^2.6.1",
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.15",
+    "util": "^0.11.1"
+  }
+}

@@ -1,0 +1,250 @@
+.bg-light {
+  background-color: #404b69 !important;
+}
+
+.btn:hover {
+background-color: #51e3d4;
+}
+
+h1 {
+  color: #21e6c1;
+}
+
+.navbar-brand {
+  font-family: philosopher, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+.home-screen {
+  color: black;
+  padding-bottom: 3%;
+  padding-top: 8%;
+}
+
+.navbar {
+  margin-bottom: 2%;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+}
+
+.nav-item {
+  padding-left: 7%;
+}
+
+body {
+  background-color: #edfffa;
+  font-family: "monospace";
+}
+
+.footer {
+  position: relative;
+  bottom: 60%;
+  text-align: center;
+  width: 100%;
+  height: 60%;
+  background-color: #404b69;
+  padding-bottom: 3%;
+  padding-top: 1%;
+}
+
+.footer p {
+  margin-top: 25px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.footer a {
+  color: #7efaff;
+}
+
+.composing {
+  background-color: #E4E9FD;
+  background-image: -webkit-linear-gradient(65deg, #488b8f 50%, #edfffa 50%);
+  min-height:700px;
+  font-family: 'helvetica neue';
+}
+
+.alligning {
+  text-align: center;
+}
+
+.plznote {
+  position: relative;
+  top: 8%;
+  font-size: 120%;
+  padding-bottom: 4%;
+}
+button {
+  text-align: center;
+}
+
+.composesHeading {
+  padding-bottom: 5%;
+  padding-top: 11%;
+  color: #51e3d4;
+
+}
+
+.naming {
+  width: 23%;
+  height: 4%;
+  position: relative;
+  left: 26%;
+}
+
+
+.fab {
+  padding: 500;
+  color: #51e3d4;
+}
+.fab:hover {
+  color: #db996c;
+}
+.navbar-nav li a:hover {
+  color: #7efaff !important;
+}
+
+.form-control {
+  background-color:#404b69;
+  color: white;
+}
+
+
+
+#Poems {
+  font-family: "monospace";
+}
+
+#poem-heading {
+  padding-top: 17%;
+  padding-bottom: 3%;
+  text-align: center;
+  color: #1d2323;
+}
+
+
+
+
+td:hover {
+  background-color: #21e6c1;
+}
+
+a {
+  color: #587850;
+}
+
+a:hover {
+  color: #db996c;
+}
+
+.posts {
+  padding-top: 6%;
+  background-color: #cde8f6;
+  color: black;
+}
+
+.posts-header {
+  padding-top: 5%;
+
+}
+
+.push {
+  padding-top: 1%;
+  padding-bottom: 0.5%;
+  padding-left: 1.5%;
+}
+
+hr {
+  padding-bottom: 0.1%;
+}
+
+
+.w-100 {
+    width: 100%!important;
+
+}
+.d-block {
+    display: block!important;
+    height: 50%;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.carousel {
+  position: relative;
+  bottom: 5%;
+}
+
+#infoBase {
+  padding-top: 0%;
+}
+.contact-page-seperator {
+  position: relative;
+  bottom: 10%;
+}
+
+.hovering-over:hover {
+color: #db996c;
+}
+
+.contactHeading {
+  padding-top: 5%;
+}
+
+.fas {
+  color: #b1d1c5;
+font-size: 540%;
+padding: 2%;
+padding-left: 47%;
+padding-right: 53%;
+padding-top: 5%;
+padding-bottom: 4%;
+}
+
+
+
+@media screen and (max-width: 992px) {
+  .fas {
+    color: #b1d1c5;
+    text-align: center;
+  font-size: 540%;
+  padding-left: 43%;
+  padding-right: 80%;
+  padding-top: 5%;
+  padding-bottom: 4%;
+  }
+}
+.comments {
+  color: black;
+}
+.comment-section {
+  background-color: #cdffeb;
+
+}
+
+/* Thick red border */
+hr {
+  border: 1px solid grey;
+}
+
+.contact-details td:hover {
+  background-color: #e3e3e3;
+}
+
+p {
+  padding-top: 3%;
+  font-size: 120%;
+  text-align:center;
+  font-family: "monospace";
+  color: #233142;
+}
+
+.commenting {
+  text-align: center;
+  color: #b1d1c5;
+  padding-top: 6%;
+}
