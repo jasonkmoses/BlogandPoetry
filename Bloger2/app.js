@@ -24,7 +24,7 @@ app.use(session({
   secret: process.env.CLIENT_SECRET_GOOGLE,
   duration: COOKIE_USER_SESSION_TIME,
   activeDuration: COOKIE_USER_SESSION_TIME }));
-mongoose.connect('mongodb+srv://Jason:Harmonymane8@blogandpoetrypoems-pn4ig.mongodb.net/blogandpoetrypoems', { useNewUrlParser: true });
+mongoose.connect('database link', { useNewUrlParser: true });
 //Below is code to give function to the comments
 const commentSchema = {
   title: String,
